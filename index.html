@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width"/>
+  <title>Navigation Menu</title>
+  <!-- Link your external stylesheet -->
+  <!-- Bootstrap JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/job.css" />
+  <link rel="stylesheet" href="css/box_gallery.css" />
+  <link rel="stylesheet" href="css/cmd-terminal.css"/>
+  
+  <link rel="stylesheet" href="css/heart.css">
+  <link rel="stylesheet" href="css/stars.css">
+ 
+</head>
+<body>
+<section id="home-section">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <div class="cursor-gradient"></div>
+  <script src="js/cursor.js"></script>
+  <script src="js/heart.js"></script>
+  <!-- Top bar container holds both logo and nav on the same row -->
+  <div class="top-bar">
+   <!-- <img class="logo" src="C:/Users/ashwa/Downloads/logo.gif" alt="logo" /> -->
+    <nav class="menu">
+      
+      <!-- <ul class="menu"> -->
+        
+        <a href="#hero">Home</a>
+        <a href="#aboutme-section">About Me</a>
+        <a href="#experinece">Experience</a>
+       <a href="#projects">Projects</a>
+       <a href="#!">Say, Hello</a>
+      <!-- </ul> -->
+    </nav>
+     <img class="logo" src="images/logo1.gif" alt="logo" />
+  </div>
+  <div id="hero"class="hero">
+    <div class="hero-text"><h2>Hey it's </h2>
+        <h1>Ashwathy <span class="last-name">Nair.</span></h1>
+        <h3 class="hero-text-h3">I'm a <span id="typing"></span><span class="cursor"></span></h3>
+        <script>
+    const titles = [
+      "DevOps Engineer",
+      "Software Engineer",
+      "Cloud Engineer",
+      "Data Engineer"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const typingElement = document.getElementById("typing");
+
+    function typeEffect() {
+      const currentTitle = titles[index];
+      
+      if (!deleting) {
+        typingElement.textContent = currentTitle.substring(0, charIndex++);
+        if (charIndex > currentTitle.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1000); // pause before deleting
+          return;
+        }
+      } else {
+        typingElement.textContent = currentTitle.substring(0, charIndex--);
+        if (charIndex < 0) {
+          deleting = false;
+          index = (index + 1) % titles.length;
+        }
+      }
+      
+      setTimeout(typeEffect, deleting ? 50 : 100);
+    }
+
+    typeEffect();
+  </script>
+
+        <h4>
+          I <span class="heart-trigger">❤️ </span>to <em>automate</em> stuff to make life more easier
+        </h4>
+    
+        
+        <p>🎓 Degree in Cloud Computing, Master's in Curiosity<br>
+          💡 Tech Explorer | Data Engineer | DevOps Enthusiast | Cloud Nerd<br>
+          🌥️ Dreaming in Python, thinking in SQL, deploying in Cloud<br>
+          📊 Exploring data to balance life - more like balancing my expenses....HEHE<br>
+          👨‍💻 When I'm not coding, probably find me scrolling pinterest looking for new recipes !!
+        </p>
+        <p></p>
+      
+      </div>
+    <!-- <div class="hero-image">
+      
+        <img src="C:/Users/ashwa/Downloads/1.gif" alt="Hero Image" />
+    </div> -->
+    <!-- terminal start -->
+    <div class="computer">
+      <div class="screen">
+          <div id="terminal">
+              <p>Type "help" to see available commands.</p>
+          </div>
+          <div class="input-area">
+              <span class="prompt">~ &gt;</span>
+              <input id="commandInput" placeholder="Type your command..." autofocus />
+          </div>
+      </div>
+  </div>
+  <script src="js/terminal1.js"></script>
+  <!--terminal end -->
+  </div >
+</section>
+
+ 
+<section id="aboutme-section" >
+ <!-- About Me Section Container -->
+<div class="aboutme-section" > 
+    <div class="main">
+        <div class ="about-image">
+            <img  src="images/IMG_09831.JPG" alt="gif Image"/> <!--example image need to change to animation-->
+        </div>
+        <div class="about-me">
+            
+            <h1 class="aboutme-left">a bit <span class="aboutme-text"></span></h1>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Right side: Glass Morphism Box -->
+    <div class="aboutme-glass">
+      <!-- <h1>About Me</h1> -->
+      <p>
+        I’m passionate about building and fixing things just like BOB the Builder <img  src="images/bob.gif" alt="gif Image" style="width:25px; height:auto;transform: scaleX(-1);margin-top:-12px;"/> . My interest in cloud computing
+        and automation began while working with TCS and now I'm here discovering the joy
+        of turning complex challenges into streamlined solutions.
+      </p>
+      <p>
+        Fast forward to today, I’ve had the privilege of working at my dream companies, contributing by writing cool python scripts to validate data or troubleshooting application issue or building CI/CD pipelines with DevOps tools. 
+        I love bringing cloud practices to life through real-world projects.
+
+      </p>
+      <p>
+        I enjoy experimenting with new tools and technologies,
+        like building monitoring dashboards or diving into infrastructure automation. I’m always learning and
+        looking for ways to contribute to innovative projects that challenge my comfort-zone!<br>
+        <br>
+        I’m a fan of crafting fun webpages with HTML, CSS, and JavaScript in my downtime! 🧙‍♂️ 
+      </p>
+    </div>
+  </div>
+</section>
+  <!-- hhkh -->
+<section class="sec-cont" id="experinece">
+  <h2  class="text-center">Professional Experience</h2>
+    
+  <div class="container mt-5" >
+   
+    <div class="row row-custom">
+        <!-- Job 1 -->
+         
+          
+         
+         <div class=" col-1 column-1 col-custom-padding">
+          <div class="job-card">
+             <div class="job-header">
+                <h5>Data Engineer</h5>
+                <span>2024 - 2025</span>
+                <button class="toggle-btn" data-job="1">+</button>
+             </div>
+            <div id="job-1" class="job-details">
+              <a href="https://www.scotiabank.com/" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdnlogo.com/logos/s/66/scotiabank.svg" width="50px" height="70px" alt="ScotiaBank"></a>
+              <p>
+                ScotiaBank
+              </p>
+              <p>
+                Automated Python scripts to validate HDFS datasets, improving performance by 76%. 
+                Collaborated with Data Office teams and utilized HiveQL queries to ensure data synchronization across EDL platforms. 
+                Spearheaded PCI DSS compliance initiatives, creating an inventory of non-compliant databases and training 130+ participants to enhance security and awareness.
+              </p>
+              <div class="skills">
+                  <span class="rain">GCP</span>
+                  <span class="rain">Hadoop</span>
+                  <span class="rain">Python</span>
+                  <span class="rain">HiveQL Scripting</span>
+                  <span class="rain">Confluence</span>
+                  <span class="rain">Jira</span>
+              </div>
+           </div>
+       </div>
+         </div>
+          
+
+
+    <div class="col-1 column-1 col-custom-padding">
+      <!-- Job 2 -->
+        <div class="job-card">
+          <div class="job-header">
+              <h5>Systems Engineer</h5>
+              <span>2019 - 2023</span>
+              <button class="toggle-btn2" data-job="2">+</button>
+          </div>
+          <div id="job-2" class="job-details">
+            <a href="https://www.tcs.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://content.influencemap.org//site/data/001/664/1664152.png" width="180px" height="120px" alt="TCS"></a>
+              <p>
+                Tata Consultancy Services
+              </p>
+            <p>
+              Automated key workflows in ServiceNow, cutting lead times by 62% and saving $5,000 annually. 
+              Led the seamless migration of MAM/MDM devices to Microsoft Intune, enhancing security and compliance. 
+              Designed Power BI dashboards for real-time data insights, optimizing team efficiency and decision-making.
+              Collaborated with cross-functional teams to deliver high-quality service.
+            </p>
+            <div class="skills">
+                <span class="rain">Azure</span>
+                <span class="rain">Intune</span>
+                <span class="rain">ServiceNow</span>
+                <span class="rain">Incident Management</span>
+                <span class="rain">Power BI</span>
+            </div>
+         </div>
+    </div>
+  </div >
+</section>      
+<!--New section Projects section-->
+<section id="projects">
+  <h2  class="box-center">Projects</h2>
+  <script src="js/boxgallery.js"></script>
+  <div class="project-gallery">
+    <!-- First Project -->
+    <div class="project-box" onclick="openModal(0, 'project1')">
+      <img src="https://wallpapercave.com/wp/wp2887960.jpg" alt="Project 1" class="project-image">
+      <div class="project-description">
+        <h3>Project 1</h3>
+        <p>React / Ruby on Rails</p>
+      </div>
+    </div>
+  
+    <!-- Second Project -->
+    <div class="project-box" onclick="openModal(0, 'project2')">
+      <img src="https://wallpapersok.com/images/high/demon-slayer-tanjiro-sixth-form-1ffsp0gb55mimw5i.jpg" alt="Project 2" class="project-image">
+      <div class="project-description">
+        <h3>Project 2</h3>
+        <p>Vue / Node.js</p>
+      </div>
+    </div>
+    
+     <!-- third Project -->
+      <div class="project-box" onclick="openModal(0, 'project3')">
+      <img src="https://wallpapersok.com/images/high/demon-slayer-tanjiro-sixth-form-1ffsp0gb55mimw5i.jpg" alt="Project 3" class="project-image">
+      <div class="project-description">
+        <h3>Project 3</h3>
+        <p>Vue / Node.js</p>
+      </div>
+    </div>
+  
+   <!-- fourth Project -->
+    <div class="project-box" onclick="openModal(0, 'project4')">
+      <img src="https://wallpapersok.com/images/high/demon-slayer-tanjiro-sixth-form-1ffsp0gb55mimw5i.jpg" alt="Project 4" class="project-image">
+      <div class="project-description">
+        <h3>Project 4</h3>
+        <p>Vue / Node.js</p>
+      </div>
+    </div>
+ 
+  
+</div>
+  
+  
+  
+  <!-- Modal (Shared for all projects) -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="slideshow-container">
+        <img id="slideshow-image" class="slideshow-image" src="" alt="Slideshow Image">
+        <button class="nav-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+      <p id="slideshow-caption" style="color: white; margin-top: 20px;"></p>
+    </div>
+  </div>
+  
+  
+</section> 
+<!-- Bootstrap JS -->
+
+
+<!-- Custom JavaScript -->
+<script src="js/script.js"></script>
+<!-- exitjjgj -->
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* Heart container */
+.heart-container {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    pointer-events: none;
+}
+
+/* Heart particle */
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    transform: rotate(-45deg);
+    opacity: 1;
+    animation: explode 0.8s ease-out forwards;
+}
+
+/* Create the heart shape using pseudo-elements */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    left: 5px;
+    top: 0;
+}
+
+/* Explosion animation */
+@keyframes explode {
+    0% {
+        transform: scale(1) translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translate(var(--x), var(--y)) rotate(-45deg);
+        opacity: 0;
+    }
+}

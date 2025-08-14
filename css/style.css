@@ -1,0 +1,354 @@
+@import url("https:/* fonts.googleapis.com/css?family=Varela+Round");
+
+/* 1. Reset and basic styling */
+
+html {
+  /* width: 1400px; */
+  box-sizing:border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+body {
+  /* width: 1400px; */
+  background: linear-gradient(to right, #1B0C3C, #150734);
+  /* justify-content: space-evenly; */
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  
+}
+.cursor-gradient {
+  position: fixed;
+  width: 150px;  
+  height: 100px;
+  pointer-events: none; 
+  background: radial-gradient(circle, rgba(12, 31, 84, 0.585) 10%, rgba(252, 201, 239, 0.3) 50%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(105px); 
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out;
+  z-index: 1000; 
+}
+
+
+
+
+/* 2. Container for logo + nav at the top */
+.top-bar {
+  
+  display: flex;   
+  flex-direction: row;
+  /* flex-wrap: nowrap;              */
+  justify-content: space-between; 
+  align-items: baseline;          
+  width: 100%;
+  padding:10px 10px 0px 0px;            
+  /* background-color: #1f1d2453; */
+
+ 
+}
+
+/* 3. Logo styling */
+.logo {
+  width: 130px !important; 
+  height: auto !important; 
+}
+
+/* 4. Nav list styling */
+.menu {
+  display: flex;      
+  list-style: none;
+  height: 8vh;
+}
+
+/* Remove margins and ensure spacing between list items */
+.menu a {
+  margin-left: 30px;  
+  white-space: nowrap; 
+  transition: background-position-x 1s linear;
+}
+
+/* Link styling */
+.menu a {
+  font-size: 22px;
+  color: #F4C95D;
+  text-decoration: none;
+  transition: all 0.45s;
+}
+
+/* Hover effect with your existing background animation */
+.menu a:hover {
+  background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIgogICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKICAgICB4PSIwcHgiIHk9IjBweCIKICAgICB3aWR0aD0iMzkwcHgiIGhlaWdodD0iNTBweCIKICAgICB2aWV3Qm94PSIwIDAgMzkwIDUwIgogICAgIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM5MCA1MCIKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIj4KCiAgPHBhdGggZmlsbD0ibm9uZSIKICAgICAgICBzdHJva2U9IiMwNTIyZjhlMyIKICAgICAgICBzdHJva2Utd2lkdGg9IjEuNSIKICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiCiAgICAgICAgZD0iTTAsNDcuNTg1YzAsMCw5Ny41LDAsMTMwLDAKICAgICAgICAgICBjMTMuNzUsMCwyOC43NC0zOC43NzgsNDYuMTY4LTE5LjQxNgogICAgICAgICAgIEMxOTIuNjY5LDQ2LjUsMjQzLjYwMyw0Ny41ODUsMjYwLDQ3LjU4NQogICAgICAgICAgIGMzMS44MjEsMCwxMzAsMCwxMzAsMCIvPgo8L3N2Zz4=");
+  animation: line 0.7s;
+}
+
+.menu a :hover a {
+  color: #fa98e1e3;
+}
+
+
+@keyframes line {
+  0% {
+    background-position-x: 390px;
+  }
+}.hero {
+  display: flex;               
+  justify-content: space-between; 
+  align-items: center;        
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 10px 10px 200px;
+  text-align: left;
+  font-family: "Varela Round", sans-serif;
+}
+.hero-text {
+width: 100%;
+  margin: 0px auto;
+  padding: 60px 20px;
+  text-align: left;
+  font-family:"Varela Round",sans-serif;
+}
+
+
+.hero-text h2 {
+  font-size: 1.2rem;
+  font-weight: 400;   
+  margin-bottom: 0.5rem;
+  font-family:"Varela Round", sans-serif;
+  color: #ffbbeee3;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family:"Varela Round",sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #ffd900;   
+}
+
+.last-name {
+  color: #ffe94d; 
+}
+
+.hero-text h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style:normal ;
+  font-family:"Varela Round",sans-serif;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  color: #ffbbeee3;
+}
+.hero-text h4 {
+  font-size: 1rem;
+  font-weight: 300; 
+  font-family:"Varela Round",sans-serif;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color:#fcc9efe3;
+}
+/* 4) Paragraph styling */
+.hero-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family:"Varela Round",sans-serif;
+  max-width: 800px; 
+  color: #ffbbeee3;
+  opacity: 80%;
+}
+/* The image container inside .hero */
+.hero-image {
+  flex: auto;              
+  max-width: 40%;         
+  text-align: right;   
+}
+
+/* Style the image itself */
+.hero-image img {
+  width: 100%; 
+  text-align: right;              
+  height: auto;                
+}
+
+
+
+/* #####################
+Text Changing
+##################### */
+#typing {
+      color: #ffe94d; /* job title in yellow */
+    }
+  
+    .hero-text-h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffe94d;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .cursor {
+    display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: yellow; /* yellow cursor too */
+      margin-left: 2px;
+      animation: blink 0.7s infinite;
+      vertical-align: middle;
+    }
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+
+
+/********************************************
+  About Me Glass Section
+*********************************************/
+
+.aboutme-section {
+  display: flex;        
+
+  align-items:center;    
+  gap: 350px;                  
+  max-width: 1300px;          
+  /* margin: 20px;  
+  margin-right: 10px;         */
+  margin-top: 1px;
+  padding-top:90px;  
+  padding-bottom: 20px;      
+}
+ .main {
+  white-space: wrap;
+  width: 40vw;
+  margin-left: 5%;
+ 
+} 
+
+/* Left side (optional) */
+.about-image img{
+  object-fit: cover;
+  transform: scale(1.2); /* zoom in */
+  display: block;
+   width: 200px;         /* wider */
+  height: 180px;        /* shorter height */
+  border-radius: 50%;   /* makes oval */
+  border: 4px solid rgba(111, 111, 169, 0.471);
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: inline-block;
+}
+.about-me{
+  
+              
+  display: inline-block;
+  color: #ffe94d;
+  font-size: 2em;
+  align-items: flex-start;  
+  /* position: absolute;          */
+}
+
+.aboutme-left {
+  display: inline-block;
+  color: #fcc9efe3;
+  font-family: "Varela Round", sans-serif; 
+  font-size: 1.5rem;
+  
+}
+
+@keyframes typing {
+  0%, 5% { content: "a"; }
+  11%, 20% { content: "ab"; }
+  21%, 30% { content: "abo"; }
+  31%, 40% { content: "abou"; }
+  41%, 50% { content: "about"; }
+  51%, 60% { content: "about "; }
+  61%, 70% { content: "about m"; }
+  71%, 80% { content: "about me"; }
+  81%, 100% { content: "about me"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.aboutme-text {
+  --caret: currentcolor;
+
+}
+.aboutme-text::before {
+  content: "";
+  color: #ffe94d;
+  animation: typing 4.5s infinite;
+}
+
+
+.aboutme-text::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  color:#ffe94d;
+  animation: blink 0.5s linear infinite;
+}
+
+
+@media (prefers-reduced-motion) {
+  .aboutme-text::after {
+    animation: none;
+  }
+}  
+  
+.about-image img {
+ 
+}
+
+.aboutme-glass {
+  flex: 0 0 65%;
+  margin-right: 90px;              
+  width: 50px;           
+  
+  /* Glass morphism background */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  
+  border-radius: 25px;
+  box-shadow: 0px 0px 15px #00A8E8;
+  padding: 20px;
+  color: #fcc9efe3;                
+  
+  /* Hover animation (optional) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutme-glass:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(125, 78, 78, 0.5);
+}
+
+.aboutme-glass h1 {
+  margin-bottom: 1rem;
+  color: #ffd900; 
+}
+
+.aboutme-glass p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+

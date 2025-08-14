@@ -1,0 +1,38 @@
+
+.computer {
+    width: 900px;
+    height: 600px;
+    background: #222;
+    border-radius: 10px;
+    border: 2px solid #555;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    padding: 12px;
+    z-index: 1;
+}
+
+.screen {
+    background: #111;
+    color: #c9d1d9;
+    height: 95%;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.prompt {
+    color: #ff79c6;
+}
+
+#commandInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00FF00 ;
+    width: 100%;
+}

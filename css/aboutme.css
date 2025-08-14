@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+/* Base styling and reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+  background: #19103f; /* dark background similar to index.html */
+  color: #fff;         /* light text color for contrast */
+  letter-spacing: 1px;
+  scroll-behavior: smooth;
+}
+
+/* Glass Morphism Container */
+.glass-box {
+  /* Size & positioning */
+  max-width: 800px;
+  margin: 100px auto;     /* Center horizontally, push down from top */
+  padding: 20px;
+  
+  /* Glass morphism background */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+  /* Hover animation: scale & shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.glass-box h1 {
+  margin-bottom: 1rem;
+  color: #ffd900;  /* bright yellow or any accent color */
+}
+
+.glass-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
