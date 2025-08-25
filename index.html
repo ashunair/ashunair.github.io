@@ -241,10 +241,10 @@
   <div class="project-gallery">
     <!-- First Project -->
     <div class="project-box" onclick="openModal(0, 'project1')">
-      <img src="https://wallpapercave.com/wp/wp2887960.jpg" alt="Project 1" class="project-image">
+      <img src="assets/netflix-project.png" alt="Project 1" class="project-image">
       <div class="project-description">
-        <h3>Project 1</h3>
-        <p>React / Ruby on Rails</p>
+        <h3>Netflix Clone</h3>
+        <p>MERN-Stack</p>
       </div>
     </div>
   
@@ -283,11 +283,12 @@
   <!-- Modal (Shared for all projects) -->
   <div class="modal" id="modal">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <span class="close-btn" >&times;</span> <!--onclick="closeModal()"-->
       <div class="slideshow-container">
-        <img id="slideshow-image" class="slideshow-image" src="" alt="Slideshow Image">
-        <button class="nav-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="nav-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        <!-- <img id="slideshow-image" class="slideshow-image" src="" alt="Slideshow Image"> -->
+        <div id="slideshow-media" class="slideshow-image" ></div> <!--src="" alt="Slideshow Image" -->
+        <button class="nav-btn prev-btn" >&#10094;</button> <!-- onclick="changeSlide(-1)" -->
+        <button class="nav-btn next-btn" >&#10095;</button> <!-- onclick="changeSlide(1)"-->
       </div>
       <p id="slideshow-caption" style="color: white; margin-top: 20px;"></p>
     </div>
