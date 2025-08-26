@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/TMDB.png"
     ],
     project2: [
-      "https://img.freepik.com/free-photo/lifestyle-scene-anime-style-with-person-doing-daily-tasks_23-2151002606.jpg",
-      "https://images.hdqwalls.com/wallpapers/anime-girl-dreamy-skies-3n.jpg",
-      "https://thumbs.dreamstime.com/b/cute-cartoon-anime-wallpaper-boy-aesthetic-image-342273314.jpg"
+      "assets/AWS-Cloud.mp4",
     ],
     project3: [
       "https://img.freepik.com/free-photo/lifestyle-scene-anime-style-with-person-doing-daily-tasks_23-2151002606.jpg",
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectCaptions = {
     project1: ["Building a Netflix-inspired MERN application for browsing, streaming, and managing movies with a responsive UI and secure user authentication", "Building a Netflix-inspired MERN application for browsing, streaming, and managing movies with a responsive UI and secure user authentication", "Building a Netflix-inspired MERN application for browsing, streaming, and managing movies with a responsive UI and secure user authentication"],
-    project2: ["Image 1", "Image 2", "Image 3"],
+    project2: ["Designed a secure and scalable AWS VPC architecture with private/public subnets, routing, and controlled access for cloud resources."],
     project3: ["Image 1", "Image 2", "Image 3"],
     project4: ["Image 1", "Image 2", "Image 3"]
   };
